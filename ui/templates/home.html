@@ -11,10 +11,15 @@
     <link href="{% static 'custom/custom.css' %}" rel="stylesheet"/>
 
     <title>Hello, world!</title>
+
+    <style type="text/css">
+      .has-bg-img {
+        background-image: url("{% static 'images/main-bg.jpg'%}");
+      }
+    </style>
   </head>
   <body>
-    <div class="container-fluid bg-dark">
-      <!-- Navbar -->
+    <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">SoCal Ballers</a>
@@ -39,17 +44,18 @@
         </div>
       </div>
     </nav> <!-- End of NavBar -->
+    <div class="container-fluid has-bg-img">
     <!-- Start of Carousel -->
     <div class="row">
       <div class="col">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div id="main-carousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3" class="" aria-current="true"></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item">
+            <div class="carousel-item active">
               <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
 
               <div class="carousel-caption d-none d-md-block">
@@ -65,7 +71,7 @@
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
-            <div class="carousel-item active">
+            <div class="carousel-item">
               <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
 
               <div class="carousel-caption d-none d-md-block">
@@ -74,11 +80,11 @@
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#main-carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#main-carousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -87,7 +93,7 @@
     </div>
     <!-- End of Carousel -->
     <!-- Games Panel -->
-    <div class="row mt-5">
+    <div class="row mt-5" style="font-size: x-small;">
       <!-- Prev Games -->
       <div class="col">
         <div class="card bg-dark text-white no-round-border">
@@ -210,7 +216,7 @@
             </div>
             <!-- End of first Game List -->
             <!-- First Game List -->
-            <div class=row>
+            <div class="row">
               <div class="col">
                 <div class="card bg-dark text-white no-round-border">
                   <div class="card-body">
@@ -251,9 +257,9 @@
     </div>
     <!-- End of Games Panel -->
     <!-- Start of News Panel -->
-    <div class="row mt-5">
+    <div class="row mt-5 bg-light">
       <!-- News -->
-      <div class="col-4">
+      <div class="col-4 mt-5 mb-5">
         <div class="card">
           <img src="{% static 'logos/news_1.jpg' %}">
           <div class="card-body">
@@ -264,7 +270,7 @@
         </div>
       </div>
       <!-- League Table -->
-      <div class="col-8">
+      <div class="col-8 mt-5 mb-5">
         <div class="card">
           <h5 class="card-header bg-dark text-white">LEAGUE TABLE</h5>
           <div class="card-body">
@@ -276,7 +282,6 @@
                   <th scope="col">W</th>
                   <th scope="col">L</th>
                   <th scope="col">PCT</th>
-                  <th scope="col">GB</th>
                 </tr>
               </thead>
               <tbody>
@@ -286,7 +291,6 @@
                   <td>65</td>
                   <td>17</td>
                   <td>.793</td>
-                  <td>0.0</td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -294,7 +298,6 @@
                   <td>59</td>
                   <td>23</td>
                   <td>.720</td>
-                  <td>0.0</td>
                 </tr>
               </tbody>
             </table>
@@ -304,7 +307,7 @@
     </div>
     <!-- End of News Panel -->
     <!-- Teams -->
-    <div class="row text-white mt-5">
+    <div class="row text-white mt-1">
       <div class="col"></div>
       <div class="col"><h5><hr class="bg-warning border-2 border-top border-warning"></h5></div>
       <div class="col"></div>
@@ -323,7 +326,17 @@
     </div>
     <!-- End of Teams -->
     </div> <!-- end of main container -->
-    <script src="{% static 'bootstrap5/js/bootstrap.bundle.min.js' %}">
+    <script src="{% static 'bootstrap5/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        var myCarousel = document.querySelector('#main-carousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+          interval: 3000,
+          wrap: true
+        });
+      });
+
     </script>
   </body>
 </html>
