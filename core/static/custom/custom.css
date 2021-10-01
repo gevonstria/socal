@@ -11,3 +11,11 @@
 	width: 2em;
 	height: 2em;
 }
+
+.image-slider {
+	width: 75em !important;
+	height: 35em !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
