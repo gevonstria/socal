@@ -1,0 +1,13 @@
+.no-round-border {
+	border-radius: 0 !important;
+}
+
+.team-logo {
+	width: 5em;
+	height: 5em;
+}
+
+.team-logo-small {
+	width: 2em;
+	height: 2em;
+}
